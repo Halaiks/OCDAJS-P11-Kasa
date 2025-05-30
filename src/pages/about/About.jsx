@@ -1,3 +1,4 @@
+import React from 'react';
 import './about.scss';
 import Header from "../../components/header/Header";
 import Banner from '../../components/banner/Banner';

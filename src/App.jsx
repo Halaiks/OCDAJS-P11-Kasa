@@ -1,3 +1,4 @@
+import React from 'react';
 import Home from './pages/home/Home';
 import NotFound from './pages/notFound/NotFound';
 import About from './pages/about/About';
