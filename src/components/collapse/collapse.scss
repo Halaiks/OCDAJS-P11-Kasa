@@ -11,7 +11,7 @@
         background-color: $color-secondary;
         color: $color-primary;
         border-radius: 10px;
-        font-weight: 500;
+        font-weight: 700;
         font-size: clamp(13px, 2vw, 18px);
         padding: 10px 15px;
         cursor: pointer;
@@ -28,28 +28,36 @@
             transform: rotate(180deg);
         }
     }
-    &_content{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        letter-spacing: 1px;
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-        padding: 10px;
-        letter-spacing: 1px;
-        font-size: clamp(12px, 2vw, 16px);
-        color: $color-secondary;
-        transition: visibility 0.5s ease-in-out,
-                    opacity 0.5s ease-in-out,
-                    height 0.2s ease-in-out;
-    }
-    &_content_hidden{
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-    }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    letter-spacing: 1px;
+    font-size: clamp(12px, 2vw, 16px);
+    color: #000;
+    overflow: hidden;
+    max-height: 500px;
+    opacity: 1;
+    padding: 25px 20px;
+    transition:
+      max-height 0.8s ease,
+      opacity 0.8s ease,
+      padding 0.7s ease;
+  }
+
+  &_content_hidden {
+    overflow: hidden;
+    max-height: 0px;
+       gap: 5px;
+    letter-spacing: 1px;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: 0px 20px;
+    transition:
+      max-height 0.5s ease,
+      padding 0.8s ease;
+  }
 }
+
 
 .accomodation_collapse{
     display: flex;
