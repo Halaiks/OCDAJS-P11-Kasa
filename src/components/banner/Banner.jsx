@@ -13,7 +13,6 @@ export default function Banner() {
 		if(location.pathname === '/about'){
 			setAboutPage(true)
 		};
-		// eslint-disable-next-line
 	}, [])
 
 	return (
