@@ -3,7 +3,7 @@ import './collapse.scss'
 import arrow from '../../assets/arrow.png';
 import { useState } from 'react';
 
-export default function Collapse({title, content}) {
+export default function Collapse({title, content, isList}) {
 
     const [toggle, setToggle] = useState(false);
 
@@ -19,7 +19,7 @@ export default function Collapse({title, content}) {
                     />
                 </h3>
                 <div className={toggle ? 'collapse_content' : 'collapse_content_hidden'}>
-  {Array.isArray(content) ? (
+{isList ? (
     <ul>
       {content.map((item, index) => (
         <li key={index}>{item}</li>
